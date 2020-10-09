@@ -13,7 +13,7 @@ for file in files:
 		with open('./entry.json','r', encoding='UTF-8') as f:
 			data = json.load(f)
 			title = data['page_data']['part']
-		os.chdir('./64')
+		os.chdir('./80')
 		temp = (str(title) + '.mp4').replace(' ','-')		
 		os.system('ffmpeg -i video.m4s -i audio.m4s -codec copy '+temp)
 		os.system('move '+ temp+ ' ../../')
